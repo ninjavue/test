@@ -26,7 +26,7 @@ const Login = () => {
     if (formData.username === "admin" && formData.password === "admin123") {
       toast.success("Login successful! Redirecting...");
       setTimeout(() => {
-        navigate("/");
+        navigate("/dashboard");
       }, 1000);
     } else if (formData.username === "user" && formData.password === "user123") {
       toast.success("Login successful! Redirecting...");

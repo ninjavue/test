@@ -23,10 +23,10 @@ const Aside = ({ isDarkMode, toggleDarkMode }) => {
     {
       section: 'HOME',
       items: [
-        { icon: FiMonitor, label: 'Menu 1', url:'/', active: true, hasSubmenu: false },
-        { icon: FiBarChart2, label: 'Menu 2', url:'/', active: false, hasSubmenu: false },
+        { icon: FiMonitor, label: 'Menu 1', url:'/dashboard', active: true, hasSubmenu: false },
+        { icon: FiBarChart2, label: 'Menu 2', url:'/dashboard', active: false, hasSubmenu: false },
         { icon: FiFileText, label: 'Menu 3', url:'/user', active: false, hasSubmenu: false },
-        { icon: TbLogin, label: 'Login', url:'/login', active: false, hasSubmenu: false }
+        { icon: TbLogin, label: 'Login', url:'/', active: false, hasSubmenu: false }
       ]
     }
   ];
@@ -108,7 +108,7 @@ const Aside = ({ isDarkMode, toggleDarkMode }) => {
             <p className="text-lg font-semibold text-gray-800 dark:text-white">Mike</p>
             <p className="text-base text-gray-500 dark:text-gray-400">Admin</p>
           </div>
-          <button className="p-1 text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 transition-colors" onClick={() => navigate('/login')}>
+          <button className="p-1 text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 transition-colors" onClick={() => navigate('/')}>
             <RiLogoutCircleRLine className="w-6 h-6" />
           </button>
         </div>
