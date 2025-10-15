@@ -1,0 +1,21 @@
+<svg width="200" height="150" viewBox="0 0 200 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Man with glasses and beard working on laptop -->
+  <circle cx="100" cy="80" r="25" fill="#8B5CF6"/>
+  <rect x="85" y="105" width="30" height="40" rx="5" fill="#6366F1"/>
+  <rect x="70" y="90" width="60" height="30" rx="15" fill="#3B82F6"/>
+  
+  <!-- Laptop -->
+  <rect x="60" y="120" width="80" height="20" rx="3" fill="#1F2937"/>
+  <rect x="65" y="125" width="70" height="10" rx="2" fill="#10B981"/>
+  
+  <!-- Plant -->
+  <rect x="40" y="110" width="8" height="20" fill="#059669"/>
+  <circle cx="44" cy="105" r="8" fill="#10B981"/>
+  <circle cx="40" cy="100" r="6" fill="#34D399"/>
+  <circle cx="48" cy="100" r="6" fill="#34D399"/>
+  
+  <!-- Coffee cup -->
+  <rect x="150" y="120" width="12" height="15" rx="2" fill="#F59E0B"/>
+  <rect x="152" y="125" width="8" height="8" rx="1" fill="#D97706"/>
+  <rect x="160" y="130" width="3" height="2" rx="1" fill="#92400E"/>
+</svg>
