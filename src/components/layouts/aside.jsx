@@ -45,14 +45,14 @@ const Aside = ({ isDarkMode, toggleDarkMode }) => {
       <div className="flex-1 pr-4 py-6 space-y-8">
         {menuItems.map((section, sectionIndex) => (
           <div key={sectionIndex}>
-            <h3 className="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-3">
+            <h3 className="text-xs font-semibold text-gray-500 pl-4 dark:text-gray-400 uppercase tracking-wider mb-3">
               {section.section}
             </h3>
             <ul className="space-y-2">
               {section.items.map((item, itemIndex) => (
                 <li key={itemIndex}>
                   <Link to={item.url}
-                    className={`w-full flex items-center justify-between px-3 py-4 rounded-r-xl text-sm font-medium transition-all duration-300 relative overflow-hidden group ${
+                    className={`w-full flex items-center justify-between pr-3 py-4 pl-6 rounded-r-3xl text-sm font-medium transition-all duration-300 relative overflow-hidden group ${
                       item.active
                         ? 'text-green-600 dark:text-green-400'
                         : 'text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400'
