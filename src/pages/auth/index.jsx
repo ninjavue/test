@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { FaRocket } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
 import login from "../../assets/images/login-security.png";
@@ -22,19 +21,18 @@ const Login = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     
-    // Validation
     if (formData.username === "admin" && formData.password === "admin123") {
-      toast.success("Login successful! Redirecting...");
+      toast.success("Tizimga muvaffaqiyatli kirdingiz!");
       setTimeout(() => {
-        navigate("/dashboard");
+        navigate("/modules");
       }, 1000);
     } else if (formData.username === "user" && formData.password === "user123") {
-      toast.success("Login successful! Redirecting...");
+      toast.success("Tizimga muvaffaqiyatli kirdingiz!");
       setTimeout(() => {
         navigate("/user");
       }, 1000);
     } else {
-      toast.error("Username yoki password xato!");
+      toast.error("Noto'g'ri foydalanuvchi nomi yoki parol.");
     }
   };
 
@@ -52,10 +50,6 @@ const Login = () => {
           {/* Header with logo */}
           <div className="absolute top-6 left-6 z-10">
             <div className="flex items-center space-x-2">
-              <FaRocket className="text-blue-500 text-2xl" />
-              <span className="text-xl font-semibold text-gray-800">
-                Spike Admin
-              </span>
             </div>
           </div>
 
@@ -72,7 +66,7 @@ const Login = () => {
               {/* Welcome text */}
               <div className="mb-8">
                 <h1 className="text-3xl font-bold text-gray-900 mb-2">
-                  Welcome to Spike Admin
+                  Xush kelibsiz!
                 </h1>
               </div>
 
@@ -81,7 +75,7 @@ const Login = () => {
                  {/* Username field */}
                  <div>
                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                     Username
+                     Foydalanuvchi nomi
                    </label>
                    <input
                      type="text"
@@ -89,7 +83,7 @@ const Login = () => {
                      value={formData.username}
                      onChange={handleInputChange}
                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all"
-                     placeholder="Enter your username"
+                     placeholder="Foydalanuvchi nomi"
                      required
                    />
                  </div>
@@ -97,7 +91,7 @@ const Login = () => {
                  {/* Password field */}
                  <div>
                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                     Password
+                     Parol
                    </label>
                    <input
                      type="password"
@@ -105,7 +99,7 @@ const Login = () => {
                      value={formData.password}
                      onChange={handleInputChange}
                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all"
-                     placeholder="Enter your password"
+                     placeholder="Parolni kiriting"
                      required
                    />
                  </div>
@@ -119,14 +113,14 @@ const Login = () => {
                       defaultChecked
                     />
                     <span className="ml-2 text-sm text-gray-700">
-                      Remember this Device
+                      Eslab qolinsinmi?
                     </span>
                   </label>
                   <a
                     href="#"
                     className="text-sm text-blue-600 hover:text-blue-800"
                   >
-                    Forgot Password?
+                    Parolni unutdingizmi?
                   </a>
                 </div>
 
@@ -135,18 +129,18 @@ const Login = () => {
                   type="submit"
                   className="w-full bg-blue-600 text-white py-3 px-4 rounded-lg font-medium hover:bg-blue-700 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
                 >
-                  Sign In
+                  Kirish
                 </button>
               </form>
 
               {/* Create account link */}
               <div className="mt-8 text-center">
-                <span className="text-gray-600">New to Spike? </span>
+                <span className="text-gray-600"> </span>
                 <a
                   href="#"
                   className="text-blue-600 hover:text-blue-800 font-medium"
                 >
-                  Create an account
+                  Ro'yhatdan o'tish
                 </a>
               </div>
             </div>

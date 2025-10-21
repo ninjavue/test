@@ -60,7 +60,7 @@ const UserProfile = () => {
               <div className="w-32 h-32 rounded-full border-4 border-white dark:border-gray-800 overflow-hidden">
                 <img 
                   src={userAvatar} 
-                  alt="Mike Nielsen" 
+                  alt="Anvar Hasanov" 
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -69,7 +69,7 @@ const UserProfile = () => {
             {/* User Info and Action Buttons */}
             <div className="flex items-end justify-between pt-20">
               <div>
-                <h2 className="text-2xl font-bold text-gray-900 dark:text-white">Mike Nielsen</h2>
+                <h2 className="text-2xl font-bold text-gray-900 dark:text-white">Anvar Hasanov</h2>
                 <p className="text-gray-600 dark:text-gray-400">Foydalanuvchi</p>
               </div>
               
@@ -150,7 +150,7 @@ const UserProfile = () => {
           <div className="bg-white dark:bg-[#111c2d] rounded-xl shadow-lg p-6">
             <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Introduction</h3>
             <p className="text-gray-600 dark:text-gray-400 mb-6">
-              Hello, I am Mike Nielsen. I love making websites and graphics. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Hello, I am Anvar Hasanov. I love making websites and graphics. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             </p>
             
             <div className="space-y-4">

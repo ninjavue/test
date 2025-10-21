@@ -5,8 +5,8 @@ import WelcomeIllustration from '../../assets/images/welcome_mike_nielsen.png';
 import info from '../../assets/images/info-shap.png';
 import warning from '../../assets/images/warning-shap.png';
 import danger from '../../assets/images/danger-shap.png';
-import { CardTable } from '../../components';
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, LineChart, Line, Area, AreaChart } from 'recharts';
+import { CardTable1 } from '../../components';
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Area, AreaChart } from 'recharts';
 
 
 const Home = () => {
@@ -74,7 +74,7 @@ const Home = () => {
           <div className="bg-white dark:bg-[#111c2d] rounded-xl p-6 pb-8 shadow-my border-gray-200 dark:border-gray-700 relative overflow-hidden">
             <div className="relative z-10">
               <h2 className="text-xl font-bold text-[#111c2d] dark:text-white mb-2">
-                Welcome Mike Nielsen
+                Xush kelibsiz Anvar Hasanov
               </h2>
               <p className="text-gray-600 dark:text-gray-400 text-sm mb-4">
                 Check All The Statistics
@@ -287,7 +287,7 @@ const Home = () => {
  
 
 
-      <CardTable />
+      <CardTable1 />
 
     </div>
   );

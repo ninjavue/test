@@ -1,6 +1,5 @@
 import React from 'react';
 import { 
-  FiMenu, 
   FiSearch, 
   FiMoon, 
   FiSun, 
@@ -13,6 +12,7 @@ import { BiMenuAltLeft } from "react-icons/bi";
 
 
 import user from '../../assets/images/user.jpg';
+import { Link } from 'react-router-dom';
 
 const Header = ({ isDarkMode, toggleDarkMode, toggleSidebar }) => {
   return (
@@ -28,18 +28,18 @@ const Header = ({ isDarkMode, toggleDarkMode, toggleSidebar }) => {
         </button>
         
         <nav className="hidden md:flex items-center space-x-6">
-          <a href="#" className="text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">
+          <Link to="/modules" className="text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">
             Bosh Sahifa
-          </a>
-          <a href="#" className="text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">
+          </Link>
+          <Link to="/modules" className="text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">
             Chat
-          </a>
-          <a href="#" className="text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">
+          </Link>
+          <Link to="/modules" className="text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">
             Kalendar
-          </a>
-          <a href="#" className="text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">
+          </Link>
+          <Link to="/modules" className="text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">
             Email
-          </a>
+          </Link>
         </nav>
       </div>
 
@@ -104,7 +104,7 @@ const Header = ({ isDarkMode, toggleDarkMode, toggleSidebar }) => {
             <div className="absolute -bottom-1 -right-1 w-3 h-3 bg-green-500 rounded-full border-2 border-white dark:border-gray-800"></div>
           </div>
           <div className="hidden sm:block">
-            <p className="text-sm font-semibold text-gray-800 dark:text-white">Mike Nielsen</p>
+            <p className="text-sm font-semibold text-gray-800 dark:text-white">Anvar Hasanov</p>
             <p className="text-xs text-gray-500 dark:text-gray-400">Admin</p>
           </div>
         </div>
