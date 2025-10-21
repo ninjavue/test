@@ -12,6 +12,8 @@ import {
   FiTrendingUp
 } from 'react-icons/fi';
 import { TbLayoutDashboardFilled } from "react-icons/tb";
+import { SiAddydotio } from "react-icons/si";
+
 
 import user from '../../assets/images/user.jpg';
 import { RiLogoutCircleRLine } from "react-icons/ri";
@@ -47,9 +49,10 @@ const Aside = ({ isDarkMode, toggleDarkMode, moduleId }) => {
       return [
         {
           section: "QO'SHIMCHA HUQUQLAR",
-          items: [
-            { icon: FiUserPlus, label: "Huquqlarni berish va kategoriyalash", url:`/modules/${moduleId}?section=grant-permissions`, active: currentSection === 'grant-permissions' || !currentSection, hasSubmenu: false }
-          ]
+        items: [
+          { icon: FiUserPlus, label: "Foydalanuvchilarga qo'shimcha foydalanish huquqlarini berishi", url:`/modules/${moduleId}?section=grant-permissions`, active: currentSection === 'grant-permissions' || !currentSection, hasSubmenu: false },
+          { icon: SiAddydotio, label: "Qo'shimcha foydalanish huquqlari bo'yicha kategoriyalash", url:`/modules/${moduleId}?section=grant-permission`, active: currentSection === 'grant-permission', hasSubmenu: false }
+        ]
         }
       ];
     }
@@ -119,7 +122,7 @@ const Aside = ({ isDarkMode, toggleDarkMode, moduleId }) => {
                     <div className="absolute inset-0 bg-blue-100 dark:bg-blue-900 rounded-lg opacity-0 group-hover:opacity-100 group-hover:animate-water-fill transition-opacity duration-200"></div>
                     
                     <div className="flex items-center space-x-3 relative z-10">
-                      <item.icon className={`w-5 h-5 ${
+                      <item.icon className={`w-5 h-5 min-w-5 ${
                         item.active 
                           ? 'text-green-600 dark:text-green-400' 
                           : 'text-gray-600 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-400'
