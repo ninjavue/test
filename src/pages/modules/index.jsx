@@ -22,7 +22,7 @@ const Modules = () => {
       id: 2,
       title: "Qo'shimcha huquqlar berish",
       description:
-        "Axborot tizimi foydalanuvchilariga qо'shimcha foydalanish huquqlarini berish moduli",
+        "Axborot tizimi foydalanuvchilariga qo'shimcha foydalanish huquqlarini berish moduli",
       icon: FaUserPlus,
       color: "from-blue-500 to-cyan-600",
       iconBg: "bg-blue-100",
