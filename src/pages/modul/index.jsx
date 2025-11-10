@@ -13,19 +13,17 @@ const Module = () => {
     const moduleId = params.id;
     const navigate = useNavigate();
     const [searchParams] = useSearchParams();
-    const section = searchParams.get('section') || 'speed'; // default section
+    const section = searchParams.get('section') || 'speed';
 
-    // Modal states
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [modalType, setModalType] = useState('');
 
-    // Dropdown states
+
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
     const [isDropdownOpen2, setIsDropdownOpen2] = useState(false);
     const dropdownRef = useRef(null);
     const dropdownRef2 = useRef(null);
 
-    // Data states
     const [speedData, setSpeedData] = useState([
       { id: 1, method: 'Birinchi usul', speed: '1.1 sekund' },
       { id: 2, method: 'RBAC', speed: '1.4 sekund' },
