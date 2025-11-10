@@ -2,9 +2,11 @@ import React, { useState } from "react";
 import { FaUserLock, FaUserPlus, FaChartLine } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import { IoCloseSharp } from "react-icons/io5";
+import { ImWarning } from "react-icons/im";
 
 const Modules = () => {
   const [isDialogOpen, setIsDialogOpen] = useState(false);
+  const [isAdminDialogOpen, setIsAdminDialogOpen] = useState(false);
 
   const navigate = useNavigate();
   const modules = [
@@ -145,21 +147,59 @@ const Modules = () => {
             >
               <IoCloseSharp />
             </button>
-            <h2 className="text-lg font-bold mb-4">
-              Xatolik
+            <h2 className="text-lg font-bold mb-4 flex items-center gap-2">
+              <ImWarning className="text-red-500" />{" "}
+              <span className="align-middle text-red-500">Xatolik</span>
             </h2>
             <p className="mb-6">
-              Sizda admin huquqlari yo'q! Davom etish uchun tugmalardan birini bosing.
+              Sizda admin huquqlari yo'q! Siz faqat statistikani ko'rishingiz
+              mumkin.
             </p>
             <div className="flex justify-end space-x-4">
               <button
+                onClick={() => navigate(`/modules/3`)}
                 className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-all duration-200"
-              > Ko'rish
+              >
+                Ko'rish
               </button>
+
               <button
+                onClick={() => {
+                  setIsAdminDialogOpen(true);
+                  setIsDialogOpen(false);
+                }}
                 className="px-4 py-2 bg-gray-300 text-gray-800 rounded-md hover:bg-gray-400 transition-all duration-200"
               >
-                Davom etish
+                Super adminga o'tish
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+      {/* Admin Dialog */}
+      {isAdminDialogOpen && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+          <div className="bg-white rounded-lg p-6 max-w-md mx-auto relative min-h-[200px]">
+            <button
+              onClick={() => setIsAdminDialogOpen(false)}
+              className="absolute top-[-13px] right-[-13px] text-gray-600 text-2xl bg-white rounded-md p-1 shadow-lg hover:bg-gray-200 transition-all duration-200"
+            >
+              <IoCloseSharp />
+            </button>
+            <h2 className="text-lg font-bold mb-4 flex items-center gap-2">
+              <ImWarning className="text-red-500" />{" "}
+              <span className="align-middle text-red-500">Xatolik</span>
+            </h2>
+            <p className="mb-6">
+              Siz super admin bilan bir tarmoqda bo'lishingiz kerak!
+            </p>
+
+            <div className="flex justify-end space-x-4">
+              <button
+                onClick={() => setIsAdminDialogOpen(false)}
+                className="px-4 py-2 bg-red-400 text-gray-800 rounded-md hover:bg-red-500 transition-all duration-200"
+              >
+                Yopish
               </button>
             </div>
           </div>
